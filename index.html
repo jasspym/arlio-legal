@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Arlio</title>
+<meta name="description" content="Politique de confidentialité de l'application Arlio (Jasspym), conforme RGPD.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔒</text></svg>">
+</head>
+<body>
+<style>
+  :root {
+    --bg: #faf8ff;
+    --surface: #ffffff;
+    --surface-2: #eaedff;
+    --border: #c1c6d7;
+    --border-soft: #dae2fd;
+    --text: #131b2e;
+    --text-dim: #414755;
+    --text-faint: #717786;
+    --accent: #0058bc;
+    --accent-bright: #0070eb;
+    --accent-tint-bg: rgba(0, 88, 188, 0.07);
+    --accent-tint-border: rgba(0, 88, 188, 0.22);
+    --on-accent: #ffffff;
+    --shadow: 0 4px 20px rgba(19, 27, 46, 0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e131e;
+      --surface: #1a1f2b;
+      --surface-2: #161b25;
+      --border: #222733;
+      --border-soft: #1e2430;
+      --text: #e8ebf0;
+      --text-dim: #8b94a6;
+      --text-faint: #5a6273;
+      --accent: #10b981;
+      --accent-bright: #4edea3;
+      --accent-tint-bg: rgba(16, 185, 129, 0.1);
+      --accent-tint-border: rgba(16, 185, 129, 0.3);
+      --on-accent: #0e131e;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  :root[data-theme="light"] {
+    --bg: #faf8ff; --surface: #ffffff; --surface-2: #eaedff;
+    --border: #c1c6d7; --border-soft: #dae2fd;
+    --text: #131b2e; --text-dim: #414755; --text-faint: #717786;
+    --accent: #0058bc; --accent-bright: #0070eb;
+    --accent-tint-bg: rgba(0, 88, 188, 0.07); --accent-tint-border: rgba(0, 88, 188, 0.22);
+    --on-accent: #ffffff; --shadow: 0 4px 20px rgba(19, 27, 46, 0.06);
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0e131e; --surface: #1a1f2b; --surface-2: #161b25;
+    --border: #222733; --border-soft: #1e2430;
+    --text: #e8ebf0; --text-dim: #8b94a6; --text-faint: #5a6273;
+    --accent: #10b981; --accent-bright: #4edea3;
+    --accent-tint-bg: rgba(16, 185, 129, 0.1); --accent-tint-border: rgba(16, 185, 129, 0.3);
+    --on-accent: #0e131e; --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    color: var(--text-faint);
+    font-size: 14px;
+    margin: 0 0 40px;
+  }
+
+  .brief {
+    background: var(--accent-tint-bg);
+    border: 1px solid var(--accent-tint-border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 40px;
+  }
+
+  .brief h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+    border: none;
+    padding: 0;
+  }
+
+  .brief ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .brief li {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .brief li::before {
+    content: "";
+    flex: none;
+    width: 6px;
+    height: 6px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: var(--accent-bright);
+  }
+
+  nav.toc {
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 20px 0;
+    margin-bottom: 48px;
+  }
+
+  nav.toc h2 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin: 0 0 12px;
+    border: none;
+    padding: 0;
+  }
+
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+  }
+
+  nav.toc li {
+    break-inside: avoid;
+    margin-bottom: 8px;
+  }
+
+  nav.toc a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    gap: 8px;
+  }
+
+  nav.toc a:hover,
+  nav.toc a:focus-visible {
+    color: var(--accent);
+  }
+
+  nav.toc a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  section {
+    margin-bottom: 40px;
+    scroll-margin-top: 24px;
+  }
+
+  h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+    text-wrap: balance;
+  }
+
+  h2 .num {
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 8px;
+  }
+
+  p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--text-dim);
+    max-width: 62ch;
+    margin: 0 0 14px;
+  }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  a { color: var(--accent); text-decoration-color: var(--accent-tint-border); text-underline-offset: 2px; }
+  a:hover, a:focus-visible { color: var(--accent-bright); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+  ul.plain, ul.rights {
+    margin: 0 0 14px;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  ul.plain li, ul.rights li {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    padding-left: 20px;
+    position: relative;
+    max-width: 62ch;
+  }
+
+  ul.plain li::before, ul.rights li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--text-faint);
+  }
+
+  ul.rights li strong { display: block; color: var(--text); margin-bottom: 2px; }
+
+  .sub-list {
+    margin: 8px 0 0 20px;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+  }
+
+  .sub-list li { font-size: 14.5px; color: var(--text-dim); padding-left: 16px; position: relative; }
+  .sub-list li::before { content: "·"; position: absolute; left: 0; color: var(--text-faint); }
+
+  .table-wrap { overflow-x: auto; margin: 4px 0 18px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-soft);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  th {
+    background: var(--surface-2);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 600;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .contact-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 26px;
+    box-shadow: var(--shadow);
+    margin-top: 8px;
+  }
+
+  .contact-card div { display: grid; gap: 3px; }
+  .contact-card .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+  .contact-card .value { font-size: 16px; font-weight: 600; }
+  .contact-card .value a { color: var(--text); text-decoration: none; }
+  .contact-card .value a:hover { color: var(--accent); }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-soft);
+    font-size: 13px;
+    color: var(--text-faint);
+  }
+
+  @media (max-width: 520px) {
+    nav.toc ol { columns: 1; }
+    .page { padding: 44px 18px 72px; }
+  }
+</style>
+
+<div class="page">
+  <p class="eyebrow">Arlio · Document légal</p>
+  <h1>Politique de confidentialité</h1>
+  <p class="meta">Dernière mise à jour : 4 août 2026</p>
+
+  <div class="brief">
+    <h2>En bref</h2>
+    <ul>
+      <li>Arlio ne demande aucune inscription, aucun compte, aucune adresse e-mail.</li>
+      <li>Ton profil de goût, tes favoris et ton historique de swipe restent <strong>uniquement sur ton appareil</strong> — il n'existe aucun serveur qui les reçoit.</li>
+      <li>La version gratuite affiche des publicités via Google AdMob, qui peut collecter des identifiants publicitaires.</li>
+      <li>L'achat Premium (1,99&nbsp;€, sans publicité) est traité entièrement par Apple ou Google — nous ne voyons jamais tes moyens de paiement.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Sommaire">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#s1"><span>1.</span> Responsable du traitement</a></li>
+      <li><a href="#s2"><span>2.</span> Aucune collecte par nos soins</a></li>
+      <li><a href="#s3"><span>3.</span> Publicités (Google AdMob)</a></li>
+      <li><a href="#s4"><span>4.</span> Achats intégrés (Premium)</a></li>
+      <li><a href="#s5"><span>5.</span> Aucun autre outil tiers</a></li>
+      <li><a href="#s6"><span>6.</span> Base légale (RGPD)</a></li>
+      <li><a href="#s7"><span>7.</span> Tes droits et le droit de retrait</a></li>
+      <li><a href="#s8"><span>8.</span> Durée de conservation</a></li>
+      <li><a href="#s9"><span>9.</span> Utilisation par des mineurs</a></li>
+      <li><a href="#s10"><span>10.</span> Modifications de cette politique</a></li>
+      <li><a href="#s11"><span>11.</span> Contact</a></li>
+    </ol>
+  </nav>
+
+  <p>
+    La présente politique décrit comment l'application mobile <strong>Arlio</strong> (ci-après
+    « l'application ») traite les données lorsque tu l'utilises sur iOS ou Android. Elle est
+    rédigée pour être conforme au Règlement Général sur la Protection des Données (RGPD).
+  </p>
+
+  <section id="s1">
+    <h2><span class="num">1.</span> Responsable du traitement</h2>
+    <p>
+      L'éditeur de l'application est <strong>Jasspym</strong>, contact&nbsp;:
+      <a href="mailto:contact@jasspym.com">contact@jasspym.com</a>. Pour toute question relative à
+      cette politique ou à l'exercice de tes droits, c'est cette adresse qu'il faut utiliser.
+    </p>
+  </section>
+
+  <section id="s2">
+    <h2><span class="num">2.</span> Aucune collecte par nos soins</h2>
+    <p>
+      Arlio est conçue pour fonctionner sans serveur&nbsp;: il n'existe aucun compte utilisateur,
+      aucun formulaire d'inscription, et aucune donnée personnelle (nom, e-mail, numéro de
+      téléphone) ne nous est jamais demandée ni transmise. Les données suivantes sont générées par
+      ton usage de l'app et stockées <strong>exclusivement en local, sur ton appareil</strong>, via
+      la base de données intégrée au téléphone&nbsp;:
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Donnée</th><th>À quoi elle sert</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Profil de goût (réponses aux idées swipées)</td>
+            <td>Calculer ton archétype de bâtisseur et le taux de correspondance (« Fit ») des idées suivantes</td>
+          </tr>
+          <tr>
+            <td>Favoris et historique de swipe</td>
+            <td>Te permettre de retrouver les idées aimées et de ne pas revoir deux fois la même idée</td>
+          </tr>
+          <tr>
+            <td>Statut Premium, langue, thème choisi</td>
+            <td>Mémoriser tes préférences d'affichage et débloquer le contenu Premium après achat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Ces données ne quittent jamais ton appareil&nbsp;: nous ne pouvons ni les consulter, ni les
+      recevoir, ni les revendre, pour la simple raison qu'elles ne transitent par aucun serveur nous
+      appartenant. Désinstaller l'application, ou utiliser les fonctions « Réinitialiser
+      l'historique » / « Retirer des favoris » intégrées à l'app, supprime ces données de façon
+      définitive.
+    </p>
+  </section>
+
+  <section id="s3">
+    <h2><span class="num">3.</span> Publicités (Google AdMob)</h2>
+    <p>
+      Dans la version gratuite, Arlio affiche des publicités interstitielles via le SDK
+      <strong>Google AdMob</strong> (environ une toutes les 5 idées consultées). L'achat Premium
+      supprime intégralement les publicités et, avec elles, la collecte de données décrite dans
+      cette section.
+    </p>
+    <p>Pour servir ces publicités, Google (agissant en tant que sous-traitant) peut collecter&nbsp;:</p>
+    <ul class="plain">
+      <li>un identifiant publicitaire (IDFA sur iOS, si autorisé via la fenêtre « App Tracking Transparency » d'Apple&nbsp;; identifiant publicitaire Android/GAID)&nbsp;;</li>
+      <li>l'adresse IP (utilisée notamment pour estimer une position géographique approximative)&nbsp;;</li>
+      <li>des informations techniques sur l'appareil (modèle, système d'exploitation, langue)&nbsp;;</li>
+      <li>des données d'interaction avec les publicités (affichage, clic) à des fins de mesure, de lutte contre la fraude publicitaire et, si tu y consens, de personnalisation des annonces.</li>
+    </ul>
+    <p>
+      Ce traitement est réalisé par Google selon ses propres règles de confidentialité&nbsp;:
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+      et, spécifiquement pour AdMob&nbsp;:
+      <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">support.google.com/admob/answer/6128543</a>.
+    </p>
+  </section>
+
+  <section id="s4">
+    <h2><span class="num">4.</span> Achats intégrés (Premium)</h2>
+    <p>
+      L'option Premium (achat unique, sans abonnement) est traitée intégralement par
+      <strong>Apple (App Store / StoreKit)</strong> sur iOS et <strong>Google (Play Billing)</strong>
+      sur Android. Nous ne recevons et ne stockons à aucun moment tes coordonnées bancaires&nbsp;:
+      Apple ou Google nous transmet uniquement une confirmation d'achat, qui débloque le statut
+      Premium localement sur ton appareil. Pour le détail du traitement de tes données de paiement,
+      reporte-toi à la politique de confidentialité d'Apple ou de Google Play selon ta plateforme.
+    </p>
+  </section>
+
+  <section id="s5">
+    <h2><span class="num">5.</span> Aucun autre outil tiers</h2>
+    <p>
+      En dehors de Google AdMob (publicité) et d'Apple/Google (achats intégrés), Arlio n'intègre
+      aucun outil d'analyse, de mesure d'audience, de suivi comportemental ou de service cloud
+      tiers. Il n'y a pas de traqueurs publicitaires supplémentaires, pas de revente de données à
+      des courtiers en données.
+    </p>
+  </section>
+
+  <section id="s6">
+    <h2><span class="num">6.</span> Base légale (RGPD)</h2>
+    <ul class="plain">
+      <li><strong>Exécution du contrat / intérêt légitime</strong> — stockage local nécessaire au fonctionnement de l'app (profil, favoris, historique) et traitement de l'achat Premium.</li>
+      <li><strong>Consentement</strong> — personnalisation des publicités et accès à l'identifiant publicitaire (via l'autorisation « App Tracking Transparency » sur iOS, ou les réglages de publicité d'Android)&nbsp;: tu peux refuser sans que cela t'empêche d'utiliser l'app.</li>
+    </ul>
+  </section>
+
+  <section id="s7">
+    <h2><span class="num">7.</span> Tes droits et le droit de retrait</h2>
+    <p>Conformément au RGPD, tu disposes des droits suivants&nbsp;:</p>
+    <ul class="rights">
+      <li>
+        <strong>Accès, rectification et effacement</strong>
+        Comme aucune donnée personnelle n'est stockée sur nos serveurs, ces droits s'exercent
+        directement dans l'app&nbsp;: les données locales peuvent être consultées, modifiées ou
+        supprimées via les fonctions de l'application (favoris, historique) ou en la désinstallant.
+      </li>
+      <li>
+        <strong>Retrait du consentement au suivi publicitaire</strong>
+        <ul class="sub-list">
+          <li><em>iOS</em>&nbsp;: Réglages → Confidentialité et sécurité → Publicité Apple / Suivi, ou en refusant la demande « App Tracking Transparency » lors de son affichage.</li>
+          <li><em>Android</em>&nbsp;: Réglages → Confidentialité → Publicité → Désactiver la personnalisation des annonces (ou réinitialiser l'identifiant publicitaire).</li>
+          <li>Gestion de la personnalisation des annonces Google&nbsp;: <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Opposition et limitation</strong>
+        Désactive à tout moment le suivi publicitaire comme indiqué ci-dessus&nbsp;; cela n'affecte
+        ni le fonctionnement de l'app, ni ton statut Premium si tu l'as acheté.
+      </li>
+      <li>
+        <strong>Portabilité</strong>
+        Les données étant strictement locales, elles restent sous ton contrôle direct sur ton
+        appareil.
+      </li>
+      <li>
+        <strong>Réclamation</strong>
+        Tu peux saisir la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>),
+        l'autorité française de contrôle en matière de protection des données.
+      </li>
+    </ul>
+    <p>
+      Pour toute question ou demande relative à ces droits, contacte-nous à
+      <a href="mailto:contact@jasspym.com">contact@jasspym.com</a>.
+    </p>
+  </section>
+
+  <section id="s8">
+    <h2><span class="num">8.</span> Durée de conservation</h2>
+    <p>
+      Les données stockées localement (profil, favoris, historique, statut Premium) sont conservées
+      tant que l'application reste installée sur ton appareil, ou jusqu'à ce que tu les supprimes
+      via les fonctions dédiées de l'app. Les données traitées par Google AdMob, Apple ou Google
+      Play sont conservées selon leurs propres politiques respectives, hors de notre contrôle.
+    </p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="num">9.</span> Utilisation par des mineurs</h2>
+    <p>
+      Arlio ne s'adresse pas spécifiquement à un public mineur et ne demande aucune information
+      d'identité. Si tu es parent ou tuteur légal et penses qu'un mineur utilise l'application
+      d'une manière qui te préoccupe, tu peux nous contacter à
+      <a href="mailto:contact@jasspym.com">contact@jasspym.com</a>.
+    </p>
+  </section>
+
+  <section id="s10">
+    <h2><span class="num">10.</span> Modifications de cette politique</h2>
+    <p>
+      Cette politique peut évoluer, notamment si de nouvelles fonctionnalités ou de nouveaux
+      partenaires techniques sont ajoutés à l'application. La date de dernière mise à jour en haut
+      de cette page reflète la version en vigueur. En cas de changement important, nous t'en
+      informerons via une mise à jour de l'application.
+    </p>
+  </section>
+
+  <section id="s11">
+    <h2><span class="num">11.</span> Contact</h2>
+    <div class="contact-card">
+      <div>
+        <span class="label">Éditeur</span>
+        <span class="value">Jasspym</span>
+      </div>
+      <div>
+        <span class="label">Email</span>
+        <span class="value"><a href="mailto:contact@jasspym.com">contact@jasspym.com</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Arlio — application éditée par Jasspym.
+  </footer>
+</div>
+
+</body>
+</html>
